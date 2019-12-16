@@ -375,10 +375,11 @@ c_v_pline:
 	jsr	_wide_line
 	add.w	#24,a7
 
+	move.l	(a7)+,d2
+
 	bsr	free_block	; Block address is already on the stack
 	addq.l	#4,a7
 
-	move.l	(a7)+,d2
 	rts
 
 
